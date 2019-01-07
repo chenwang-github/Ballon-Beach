@@ -9,6 +9,8 @@ public class Player : MonoBehaviour {
     public float playerSpeed;
     public float leftLimit;
     public float rightLimit;
+    public AudioClip scoreUp;
+    public AudioClip damage;
 
 	// Use this for initialization
 	void Start () {
@@ -42,4 +44,17 @@ public class Player : MonoBehaviour {
 
         
 	}
+
+    private void OnTriggerExit(Collider other)
+    {
+
+        if (other.gameObject.tag == "Gap")
+        {
+            GetComponent<AudioSource>().PlayOneShot(scoreUp, 1.0f);
+        }
+        if (other.gameObject.tag == "Tri")
+        {
+            GetComponent<AudioSource>().PlayOneShot(damage, 1.0f);
+        }
+    }
 }
