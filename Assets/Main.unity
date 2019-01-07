@@ -706,7 +706,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 340871119}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 745199849}
+        m_MethodName: playButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &340871119
@@ -1389,6 +1400,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4d89559dd6c24cc694ac4db4e47d5c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inMenuUI: {fileID: 2086477823}
+  inGameUI: {fileID: 202949019}
+  gameOverUI: {fileID: 517667171}
+  player: {fileID: 423963841}
 --- !u!1 &785178901
 GameObject:
   m_ObjectHideFlags: 0
