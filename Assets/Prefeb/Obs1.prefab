@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 4949915649203282}
   - component: {fileID: 33408318701339596}
   - component: {fileID: 23042048464120582}
-  - component: {fileID: 64187235081576524}
+  - component: {fileID: 65340405639848976}
   m_Layer: 0
   m_Name: Triangle (1)
   m_TagString: Tri
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 4638313558322332}
   - component: {fileID: 33405238565862454}
   - component: {fileID: 23514776734296626}
-  - component: {fileID: 64644991645204558}
+  - component: {fileID: 65387780272285694}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Tri
@@ -218,34 +218,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1661401283875604}
   m_Mesh: {fileID: 4300000, guid: 72076e871a74e44a3b2d1480aad87aab, type: 3}
---- !u!64 &64187235081576524
-MeshCollider:
+--- !u!65 &65340405639848976
+BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1661401283875604}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 72076e871a74e44a3b2d1480aad87aab, type: 3}
---- !u!64 &64644991645204558
-MeshCollider:
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.020000005, z: 0.015000003}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65387780272285694
+BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1865539955614974}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300000, guid: 72076e871a74e44a3b2d1480aad87aab, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.020000005, z: 0.015000003}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65969613205267484
 BoxCollider:
   m_ObjectHideFlags: 1

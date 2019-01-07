@@ -366,6 +366,8 @@ MonoBehaviour:
   playerSpeed: 600
   leftLimit: 0
   rightLimit: 0
+  scoreUp: {fileID: 8300000, guid: 070d00edf771144569793e9ddf807dae, type: 3}
+  damage: {fileID: 8300000, guid: adc1b4367b9a241cc91993de217d6fc6, type: 3}
 --- !u!114 &423963849
 MonoBehaviour:
   m_ObjectHideFlags: 0
