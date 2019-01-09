@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class AppInit : MonoBehaviour {
 
@@ -8,6 +10,7 @@ public class AppInit : MonoBehaviour {
     public GameObject inGameUI;
     public GameObject gameOverUI;
     public GameObject player;
+    private bool hasGameStarted = false;
 
 
     void Awake()
@@ -30,8 +33,39 @@ public class AppInit : MonoBehaviour {
 		
 	}
 
-    public void playButton(){
-        StartCoroutine(StartGame(0.0f));
+    public void Gameover()
+    {
+        inMenuUI.gameObject.SetActive(false);
+        inGameUI.gameObject.SetActive(false);
+        gameOverUI.gameObject.SetActive(true);
+        player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
+        hasGameStarted = false;
+    }
+
+    public void Restart(){
+        SceneManager.LoadScene(0);
+        StartCoroutine(StartGame(1.0f));
+    }
+
+    public void PlayButton(){
+        if(hasGameStarted == true){
+            StartCoroutine(StartGame(1.0f));
+        }else{
+            StartCoroutine(StartGame(0.0f));
+            hasGameStarted = true;
+        }
+    }
+
+    public void ShowAd(){
+        //showAd
+        StartCoroutine(StartGame(1.0f));
+    }
+
+    public void PauseButton(){
+        inMenuUI.gameObject.SetActive(true);
+        inGameUI.gameObject.SetActive(false);
+        gameOverUI.gameObject.SetActive(false);
+        player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
     }
 
     IEnumerator StartGame(float waitTime){
@@ -40,5 +74,6 @@ public class AppInit : MonoBehaviour {
         gameOverUI.gameObject.SetActive(false);
         yield return new WaitForSeconds(waitTime);
         player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionY;
+
     }
 }

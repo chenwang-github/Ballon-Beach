@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     public GameObject ground;
+    public GameObject sene;
 
     public float playerSpeed;
     public float leftLimit;
@@ -55,6 +56,8 @@ public class Player : MonoBehaviour {
         if (other.gameObject.tag == "Tri")
         {
             GetComponent<AudioSource>().PlayOneShot(damage, 1.0f);
+            sene.GetComponent<AppInit>().Gameover();
+            //Score = 0;
         }
     }
 }
